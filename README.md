@@ -20,22 +20,22 @@
 
 # centos introduction:
 *    step1. Modify uwsgi.ini
-        Please modify the port number.
+*         Please modify the port number.
 
 *    step2.Installing CentOS environment dependencies
-        sudo yum install -y pcre pcre-devel pcre-static
-        sudo yum install -y gcc
-        sudo yum install -y python-devel
+*        sudo yum install -y pcre pcre-devel pcre-static
+*        sudo yum install -y gcc
+*        sudo yum install -y python-devel
 
 
 *    step3. Note
-        1.There may be a system error, and you will get the following error: "\r"
-            sudo yum install -y dos2unix
-            dos2unix *
-            dos2unix */*
-            dos2unix */*/*
+*        1.There may be a system error, and you will get the following error: "\r"
+*            sudo yum install -y dos2unix
+*            dos2unix *
+*            dos2unix */*
+*            dos2unix */*/*
 
-&    1. start
+#    1. start
         sh bin/start.sh
-&    2. stop
+#    2. stop
         sh bin/stop.sh
