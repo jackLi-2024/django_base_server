@@ -30,8 +30,31 @@ SECRET_KEY = '$&&z8mjhzonid!)(1r*=*l49q-1kbodivdz7lf_ku7+22hq135'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
-
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = ('*')
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'VIEW',
+)
+CORS_ALLOW_HEADERS = (
+    'XMLHttpRequest',
+    'X_FILENAME',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    "token"
+)
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +67,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     "djcelery",
+    "corsheaders"
 
 
 ]
@@ -52,6 +76,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
