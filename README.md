@@ -39,3 +39,10 @@
         sh bin/start.sh
 #    2. stop
         sh bin/stop.sh
+        
+* Docker:
+    # step1: build image
+        docker build -t pand-python-3.6-django:base .
+
+    # step2: start container
+        docker run -itd --name {container_name} -v {project_dir}:/opt/app-root/src/ -p 8000:7999 pand-python-3.6-django:base bash
