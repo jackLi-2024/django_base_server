@@ -21,6 +21,7 @@ Pillow
 anyjson
 django-cors-headers
 werkzeug
+uwsgi
 
 
 
