@@ -6,6 +6,6 @@ ADD ./requirements.txt /root/
 #这里是否更新库待定
 USER root
 
-RUN yum install -y vim \
-    && pip3 install -r /root/requirements.txt
-
+#RUN yum install -y vim \
+#    && pip3 install -r /root/requirements.txt
+RUN pip3 install -r /root/requirements.txt
