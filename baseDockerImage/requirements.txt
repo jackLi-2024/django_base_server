@@ -9,7 +9,7 @@ django-restframework==0.0.1
 django-silk==3.0.2
 django-timezone-field==3.0
 djangorestframework==3.9.4
-eventlet==0.25.0
+eventlet==0.31.0
 mongoengine==0.17.0
 mysqlclient==1.4.2.post1
 psycopg2==2.8.2
